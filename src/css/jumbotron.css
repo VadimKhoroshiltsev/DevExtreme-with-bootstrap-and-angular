@@ -1,0 +1,22 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.dx-widget,
+.dx-widget input,
+.dx-widget textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.btn-lg .dx-button-content {
+  padding: 0;
+}
+
+.dx-toast-view-detail {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+  font-weight: 400;
+}
