@@ -1,6 +1,3 @@
-var path = require('path');
-var GlobalizePlugin = require("globalize-webpack-plugin");
-
 module.exports = {
     entry: ['./src/index.js'],
     output: {
