@@ -10,10 +10,13 @@ require('devextreme/integration/angular');
 
 require('devextreme/ui/text_box');
 require('devextreme/ui/button');
+require('devextreme/ui/data_grid');
+require('devextreme/viz/pie_chart');
+require('devextreme/viz/chart');
 var dxNotify = require('devextreme/ui/notify');
 
 var myApp = angular.module('myApp', ['dx']);
-myApp.controller("myController", function($scope) {
+myApp.controller('myController', function($scope) {
   $scope.email = {
     placeholder: 'Email',
     type: 'email'
@@ -29,19 +32,93 @@ myApp.controller("myController", function($scope) {
       dxNotify('Sign in is not available in this demo', 'success', 1000);
     }
   };
-  $scope.jumbotronButton = {
-    text: "Learn more »",
-    type: "default",
-    onClick: function(){
-      dxNotify('Learn more is not available in this demo', 'info', 1000);
-    }
-  }
   $scope.viewDetailButton = {
-    text: "View details »",
+    text: 'View details »',
     onClick: function(){
       dxNotify('View details is not available in this demo', 'view-detail', 1000);
     }
   };
+
+  $scope.gridOptions = {
+    dataSource: require('json!./data/grid.json'),
+    columnHidingEnabled: true,
+    paging: {
+      pageSize: 5
+    },
+    export: {
+      enabled: true,
+      fileName: 'Orders'
+    },
+    columnChooser: {
+      enabled: true,
+      mode: 'select'
+    },
+    columns: [{
+      allowGrouping: false,
+      dataField: 'OrderNumber',
+      caption: 'Invoice Number'
+    },  {
+      caption: 'City',
+      dataField: 'CustomerStoreCity'
+    }, {
+      caption: 'State',
+      dataField: 'CustomerStoreState'
+    },
+      'Employee',{
+        dataField: 'OrderDate',
+        dataType: 'date'
+      }, {
+        dataField: 'SaleAmount',
+        format: 'currency'
+      }]
+  };
+
+  var chartData = require('json!./data/chart.json');
+  $scope.pieChart = {
+    dataSource: chartData,
+    palette: 'Ocean',
+    title: 'List of sales by states',
+    legend: {
+      orientation: 'horizontal',
+      itemTextPosition: 'bottom',
+      horizontalAlignment: 'center',
+      verticalAlignment: 'bottom',
+      columnCount: 4
+    },
+    'export': {
+      enabled: true
+    },
+    series: [{
+      argumentField: 'state',
+      valueField: 'saleAmount',
+      label: {
+        visible: true,
+        font: {
+          size: 16
+        },
+        connector: {
+          visible: true,
+          width: 0.5
+        },
+        position: 'columns',
+        customizeText: function(arg) {
+          return arg.valueText + ' (' + arg.percentText + ')';
+        }
+      }
+    }]
+  };
+
+  $scope.chart = {
+    dataSource: chartData,
+    palette: 'Ocean',
+    series: {
+      argumentField: 'state',
+      valueField: 'saleAmount',
+      name: 'List of sales by states',
+      type: 'bar'
+    }
+  };
+
 });
 
 angular.bootstrap(document, ['myApp']);
