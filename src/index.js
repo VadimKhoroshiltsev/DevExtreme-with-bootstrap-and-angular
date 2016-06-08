@@ -18,7 +18,7 @@ require('devextreme/ui/scheduler');
 var dxNotify = require('devextreme/ui/notify');
 
 var myApp = angular.module('myApp', ['dx']);
-myApp.controller('myController', function($scope) {
+myApp.controller('myController', ['$scope', function($scope) {
   $scope.email = {
     placeholder: 'Email',
     type: 'email'
@@ -144,6 +144,4 @@ myApp.controller('myController', function($scope) {
     height: 600
   }
 
-});
-
-angular.bootstrap(document, ['myApp']);
+}]);

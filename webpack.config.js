@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 module.exports = {
     entry: ['./src/index.js'],
     output: {
@@ -21,5 +22,12 @@ module.exports = {
             test: /bootstrap-sass\\assets\\javascripts\\/,
             loader: 'imports?jQuery=jquery'
         }]
-    }
+    },
+    plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        })
+    ]
 };
