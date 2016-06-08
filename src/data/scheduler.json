@@ -1,0 +1,136 @@
+[
+  {
+    "text": "Website Re-Design Plan",
+    "ownerId": [
+      4
+    ],
+    "startDate": "2015-05-25T06:30:00.000Z",
+    "endDate": "2015-05-25T08:30:00.000Z"
+  },
+  {
+    "text": "Book Flights to San Fran for Sales Trip",
+    "ownerId": [
+      2
+    ],
+    "startDate": "2015-05-25T09:00:00.000Z",
+    "endDate": "2015-05-25T10:00:00.000Z"
+  },
+  {
+    "text": "Install New Router in Dev Room",
+    "ownerId": [
+      1
+    ],
+    "startDate": "2015-05-25T11:30:00.000Z",
+    "endDate": "2015-05-25T12:30:00.000Z"
+  },
+  {
+    "text": "Approve Personal Computer Upgrade Plan",
+    "ownerId": [
+      3
+    ],
+    "startDate": "2015-05-26T07:00:00.000Z",
+    "endDate": "2015-05-26T08:00:00.000Z"
+  },
+  {
+    "text": "Final Budget Review",
+    "ownerId": [
+      1
+    ],
+    "startDate": "2015-05-26T09:00:00.000Z",
+    "endDate": "2015-05-26T10:35:00.000Z"
+  },
+  {
+    "text": "New Brochures",
+    "ownerId": [
+      4
+    ],
+    "startDate": "2015-05-26T11:30:00.000Z",
+    "endDate": "2015-05-26T12:45:00.000Z"
+  },
+  {
+    "text": "Install New Database",
+    "ownerId": [
+      2
+    ],
+    "startDate": "2015-05-27T06:45:00.000Z",
+    "endDate": "2015-05-27T08:15:00.000Z"
+  },
+  {
+    "text": "Approve New Online Marketing Strategy",
+    "ownerId": [
+      3,
+      4
+    ],
+    "startDate": "2015-05-27T09:00:00.000Z",
+    "endDate": "2015-05-27T11:00:00.000Z"
+  },
+  {
+    "text": "Upgrade Personal Computers",
+    "ownerId": [
+      2
+    ],
+    "startDate": "2015-05-27T12:15:00.000Z",
+    "endDate": "2015-05-27T13:30:00.000Z"
+  },
+  {
+    "text": "Prepare 2015 Marketing Plan",
+    "ownerId": [
+      1,
+      3
+    ],
+    "startDate": "2015-05-28T08:00:00.000Z",
+    "endDate": "2015-05-28T10:30:00.000Z"
+  },
+  {
+    "text": "Brochure Design Review",
+    "ownerId": [
+      4
+    ],
+    "startDate": "2015-05-28T11:00:00.000Z",
+    "endDate": "2015-05-28T12:30:00.000Z"
+  },
+  {
+    "text": "Create Icons for Website",
+    "ownerId": [
+      3
+    ],
+    "startDate": "2015-05-29T07:00:00.000Z",
+    "endDate": "2015-05-29T08:30:00.000Z"
+  },
+  {
+    "text": "Upgrade Server Hardware",
+    "ownerId": [
+      4
+    ],
+    "startDate": "2015-05-29T11:30:00.000Z",
+    "endDate": "2015-05-29T13:00:00.000Z"
+  },
+  {
+    "text": "Submit New Website Design",
+    "ownerId": [
+      1
+    ],
+    "startDate": "2015-05-29T13:30:00.000Z",
+    "endDate": "2015-05-29T15:00:00.000Z"
+  },
+  {
+    "text": "Launch New Website",
+    "ownerId": [
+      2
+    ],
+    "startDate": "2015-05-29T09:20:00.000Z",
+    "endDate": "2015-05-29T11:00:00.000Z"
+  },
+  {
+    "text": "Stand-up meeting",
+    "ownerId": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "startDate": "2015-05-25T06:00:00.000Z",
+    "endDate": "2015-05-25T06:15:00.000Z",
+    "recurrenceRule": "FREQ=DAILY;BYDAY=MO,TU,WE,TH,FR;UNTIL=20150530"
+  }
+]

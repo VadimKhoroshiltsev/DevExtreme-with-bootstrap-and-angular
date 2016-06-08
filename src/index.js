@@ -5,7 +5,7 @@ require('bootstrap-loader');
 require('./css/jumbotron.css');
 
 var angular = require('angular');
-var angularSanitize = require('angular-sanitize');
+require('angular-sanitize');
 require('devextreme/integration/angular');
 
 require('devextreme/ui/text_box');
@@ -13,6 +13,8 @@ require('devextreme/ui/button');
 require('devextreme/ui/data_grid');
 require('devextreme/viz/pie_chart');
 require('devextreme/viz/chart');
+require('devextreme/ui/scheduler');
+
 var dxNotify = require('devextreme/ui/notify');
 
 var myApp = angular.module('myApp', ['dx']);
@@ -118,6 +120,29 @@ myApp.controller('myController', function($scope) {
       type: 'bar'
     }
   };
+
+  $scope.scheduler = {
+    dataSource: require('json!./data/scheduler.json'),
+    views: ["agenda", "month", "week", "workWeek", "day"],
+    currentView: "workWeek",
+    currentDate: new Date(2015, 4, 25),
+    useDropDownViewSwitcher: false,
+    firstDayOfWeek: 0,
+    startDayHour: 8,
+    endDayHour: 19,
+    bindingOptions: {
+      editing: "editing",
+      useDropDownViewSwitcher: "useDropDownViewSwitcher"
+    },
+    resources: [{
+      field: "ownerId",
+      label: "Owner",
+      allowMultiple: true,
+      dataSource: require('json!./data/schedulerResources.json')
+    }],
+    width: "100%",
+    height: 600
+  }
 
 });
 
