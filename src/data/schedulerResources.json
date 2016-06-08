@@ -2,21 +2,21 @@
   {
     "text": "Samantha Bright",
     "id": 1,
-    "color": "#cb6bb2"
+    "color": "rgb(6, 73, 112)"
   },
   {
     "text": "John Heart",
     "id": 2,
-    "color": "#56ca85"
+    "color": "rgb(56, 197, 210)"
   },
   {
     "text": "Todd Hoffman",
     "id": 3,
-    "color": "#1e90ff"
+    "color": "rgb(117, 192, 153)"
   },
   {
     "text": "Sandra Johnson",
     "id": 4,
-    "color": "#ff9747"
+    "color": "rgb(55, 138, 138)"
   }
 ]
