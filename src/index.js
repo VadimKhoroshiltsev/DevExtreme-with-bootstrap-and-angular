@@ -1,4 +1,12 @@
 require('file?name=[name].[ext]!./index.html');
+require('file?name=[name].[ext]!./pace.min.js');
+require('file?name=[name].[ext]!./pace-theme-center-simple.css');
+
+var $ = require('jquery');
+window.Pace.on("done", function(){
+  $("#contentWrapper").removeClass("transparent");
+});
+
 require('devextreme/css/dx.common.css');
 require('devextreme/css/dx.light.css');
 require('bootstrap-loader');
@@ -37,7 +45,7 @@ myApp.controller('myController', ['$scope', function($scope) {
   $scope.viewDetailButton = {
     text: 'View details »',
     onClick: function(){
-      dxNotify('View details is not available in this demo', 'view-detail', 1000);
+      dxNotify('View details is not available in this demo', 'warning', 1000);
     }
   };
 

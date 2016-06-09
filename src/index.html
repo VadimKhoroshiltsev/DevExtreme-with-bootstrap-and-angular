@@ -1,93 +1,117 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
-  <head>
+<head>
+    <script src="pace.min.js"></script>
+    <link rel="stylesheet" href="pace-theme-center-simple.css">
+    <style>
+        #contentWrapper {
+            transition: opacity ease .5s;
+        }
+        .transparent {
+            opacity: 0;
+        }
+    </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Jumbotron Template for Bootstrap</title>
-  </head>
-  <body ng-controller="myController">
+</head>
+<body ng-controller="myController">
+<div id="contentWrapper" class="transparent">
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">DevExtreme Demonstration Project</a>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">DevExtreme Demonstration Project</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <div dx-text-box="email"></div>
+                    </div>
+                    <div class="form-group">
+                        <div dx-text-box="password"></div>
+                    </div>
+                    <div dx-button="signIn"></div>
+                </form>
+            </div><!--/.navbar-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <div dx-text-box="email"></div>
-            </div>
-            <div class="form-group">
-              <div dx-text-box="password"></div>
-            </div>
-            <div dx-button="signIn"></div>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
-      <div class="container">
-        <div class="col-sm-12 col-md-6">
-          <div dx-pie-chart="pieChart"></div>
+        <div class="container">
+            <div class="col-sm-12 col-md-6">
+                <div dx-pie-chart="pieChart"></div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div dx-chart="chart"></div>
+            </div>
         </div>
-        <div class="col-sm-12 col-md-6">
-          <div dx-chart="chart"></div>
-        </div>
-      </div>
     </div>
 
     <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-sm-12">
-          <h2>List Of Orders</h2>
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>List Of Orders</h2>
+            </div>
+            <div class="col-sm-12">
+                <div dx-data-grid="gridOptions"></div>
+            </div>
         </div>
-        <div class="col-sm-12">
-          <div dx-data-grid="gridOptions"></div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-sm-12"><h2>Scheduler</h2></div>
-        <div class="col-sm-12">
-          <div dx-scheduler="scheduler"></div>
+        <div class="row">
+            <div class="col-sm-12"><h2>Scheduler</h2></div>
+            <div class="col-sm-12">
+                <div dx-scheduler="scheduler"></div>
+            </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><div dx-button="viewDetailButton"></div></p>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                    mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+                    mollis euismod. Donec sed odio dui. </p>
+                <p>
+                <div dx-button="viewDetailButton"></div>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                    mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+                    mollis euismod. Donec sed odio dui. </p>
+                <p>
+                <div dx-button="viewDetailButton"></div>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
+                    porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+                    ut fermentum massa justo sit amet risus.</p>
+                <p>
+                <div dx-button="viewDetailButton"></div>
+                </p>
+            </div>
         </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><div dx-button="viewDetailButton"></div></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><div dx-button="viewDetailButton"></div></p>
-        </div>
-      </div>
-      <hr>
-      <footer>
-        <p>&copy; 2016 Company, Inc.</p>
-      </footer>
+        <hr>
+        <footer>
+            <p>&copy; 2016 Company, Inc.</p>
+        </footer>
     </div> <!-- /container -->
-    <script src="index.js" ></script>
-  </body>
+</div>
+<script src="index.js"></script>
+</body>
 </html>

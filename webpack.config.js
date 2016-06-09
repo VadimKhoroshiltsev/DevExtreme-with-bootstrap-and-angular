@@ -8,6 +8,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.css$/,
+            exclude: /pace-theme-/,
             loaders: ['style', 'css']
         }, {
             test: /\.scss$/,

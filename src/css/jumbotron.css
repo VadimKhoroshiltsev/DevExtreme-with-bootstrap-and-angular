@@ -13,10 +13,3 @@ body {
 .btn-lg .dx-button-content {
   padding: 0;
 }
-
-.dx-toast-view-detail {
-  background: #fff;
-  border: 1px solid #ddd;
-  color: #333;
-  font-weight: 400;
-}
